@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -9,7 +11,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -19,17 +20,31 @@
   color: white;
 }
 
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-link {
   color: #61dafb;
 }
 
-.twitter-timeline {
-  width: 50%;
-  max-width: 500px;
+a img {
+  max-width: 200px;
 }
 
-.twitter-timeline {
+/* .twitter-timeline {
+  width: 50%;
+  max-width: 500px;
+} */
+
+a, .twitter-timeline {
   float: right;
+  max-width: 40%;
 }
 
 @keyframes App-logo-spin {

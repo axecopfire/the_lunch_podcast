@@ -1,20 +1,20 @@
 import React from 'react';
-import logo from './the_lunch_podcast_logo.png';
 import './App.css';
 import TwitterFeed from './components/twitter_feed';
+import AnchorFM from './components/anchorFM';
 
 function App() {
 
   return (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} 
-      // className="App-logo" 
-      alt="logo" />
-      <h1>The Lunch Podcast</h1>
-      <TwitterFeed />
-    </header>
-  </div>
+    <div className="App">
+      <header className="App-header">
+        <h1>The Lunch Podcast</h1>
+      </header>
+      <section className="social-media" >
+        <AnchorFM />
+        <TwitterFeed />
+      </section>
+    </div>
   );
 }
 
