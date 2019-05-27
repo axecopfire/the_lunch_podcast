@@ -12,6 +12,8 @@ function App() {
       </header>
       <section className="social-media" >
         <AnchorFM />
+      </section>
+      <section className="twitter-feed">
         <TwitterFeed />
       </section>
     </div>

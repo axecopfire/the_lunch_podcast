@@ -20,28 +20,21 @@
   color: white;
 }
 
-/* .social-media {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
 .App-link {
   color: #61dafb;
 }
 
-a {
-  /* max-width: 200px; */
-  margin: 40px auto;
-}
-
-a, .twitter-timeline {
-  float: right;
-  max-width: 40%;
+.twitter-feed {
+  max-width: 300px;
+  width: 80%;
+  min-width:180px;
   position: relative;
+  margin: 0 auto;
+  max-height: 500px;
+  overflow: scroll;
+}
+.twitter-timeline {
+  width: 100%;
 }
 
 img {
@@ -52,6 +45,12 @@ img {
   position: relative;
 }
 
+a {
+  /* max-width: 200px; */
+  position: relative;
+  margin: 40px auto;
+  height: 100%;
+}
 
 .hover-effect {
   background-color: rgba(255,255,255, 0);
@@ -79,7 +78,6 @@ img {
 
 a:hover .hover-effect {
   background-color: rgba(255,255,255, 0.3);
-  
 }
 a:hover .hover-effect p {
   color: red;
