@@ -10,7 +10,7 @@
   pointer-events: none;
 }
 
-.App-header {
+.App-header, .social-media {
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -20,31 +20,69 @@
   color: white;
 }
 
-.social-media {
+/* .social-media {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
 }
 
-a img {
-  max-width: 200px;
+a {
+  /* max-width: 200px; */
+  margin: 40px auto;
 }
-
-/* .twitter-timeline {
-  width: 50%;
-  max-width: 500px;
-} */
 
 a, .twitter-timeline {
   float: right;
   max-width: 40%;
+  position: relative;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+
+.hover-effect {
+  background-color: rgba(255,255,255, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+}
+
+.hover-effect p {
+  color: transparent;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+a:hover .hover-effect {
+  background-color: rgba(255,255,255, 0.3);
+  
+}
+a:hover .hover-effect p {
+  color: red;
 }
 
 @keyframes App-logo-spin {
