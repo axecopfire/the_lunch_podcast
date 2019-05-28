@@ -1,3 +1,7 @@
+# RSS Feed
+- https://anchor.fm/s/af3e800/podcast/rss
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
