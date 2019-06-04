@@ -4,15 +4,19 @@ import Clipboard from './clipboard';
 export default class Clipboards extends React.Component {
     render () {
         return (
-            <div>
-                <Clipboard />
-                <Clipboard />
-                <Clipboard />
-                <Clipboard />
-                <Clipboard />
-                <Clipboard />
-                <Clipboard />
-            </div>
+            <ul class="clipboards">
+                <h2>Clipboards App</h2>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+                <li><Clipboard /></li>
+            </ul>
         )
     }
 }
