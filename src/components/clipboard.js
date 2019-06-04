@@ -15,12 +15,9 @@ export default class Clipboard extends React.Component {
     }
     
     handleSubmit (event) {
-        console.log(this.state.value);
         event.preventDefault();
 
-        tempInput.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
+        navigator.clipboard.writeText(this.state.value);
     }
     render () {
         return (  
