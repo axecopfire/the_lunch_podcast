@@ -84,6 +84,28 @@ a:hover .hover-effect p {
   color: red;
 }
 
+.clipboards {
+  margin: 0 auto;
+}
+.clipboards h2 {
+  color: rgba(255, 255, 255, .9);
+  margin: 0;
+  font-size: 36px;
+}
+.clipboards li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+.clipboards input {
+  padding: 5px 10px;
+  font-size: 24px;
+  margin: 20px;
+  border-radius: 5px;
+}
+.clipboards input[type=submit] {
+  cursor: pointer;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
