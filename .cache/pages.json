@@ -20,8 +20,18 @@
         "path": "/dev-404-page/"
     },
     {
+        "componentChunkName": "component---src-templates-no-data-js",
+        "jsonName": "no-data-65f",
+        "path": "/no-data/"
+    },
+    {
         "componentChunkName": "component---src-pages-page-2-js",
         "jsonName": "page-2-fbc",
         "path": "/page-2/"
+    },
+    {
+        "componentChunkName": "component---src-pages-rss-testing-js",
+        "jsonName": "rss-testing-c66",
+        "path": "/rss-testing/"
     }
 ]
