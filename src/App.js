@@ -16,13 +16,14 @@ function App() {
       <header className="App-header">
         <h1>The Lunch Podcast</h1>
       </header>
-      <section className="social-media" >
+      <Rss />
+      {/* <section className="social-media" >
         <AnchorFM />
       </section>
       <section className="twitter-feed">
         <TwitterFeed />
-      </section>
-      <Rss />
+      </section> */}
+      
     </div>
   );
 }

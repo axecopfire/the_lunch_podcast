@@ -6,7 +6,7 @@ export default class Rss extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      xmlDoc: {}
+      xmlDoc: []
     };
   }
 
@@ -24,64 +24,51 @@ export default class Rss extends React.Component {
   }
 
   responseSanitizer(data) {
-    // console.log(data.querySelector("item"));
     let epList = data.querySelectorAll("item");
-    console.log(this.state);
 
+    let elList = [
+      "title",
+      "description",
+      "link",
+      "pubDate",
+      "enclosure",
+      "summary",
+      "image"
+    ];
+
+    // Loop through List of Episodes
+    // Also loop through list of elements from fetched xml
+    // then set state of xmlDoc
     epList.forEach(item => {
-
-      let elList = [
-        "title",
-        "description",
-        "link",
-        "pubDate",
-        "enclosure",
-        "itunes:summary",
-        "itunes:image"
-      ];
+      let itemObj = {};
 
       elList.forEach(el => {
-        if(el === "enclosure") {
-            this.setState({
-                xmlDoc: {
-                    enclosure: item.querySelector(el).getAttribute("url")
-                }
-            });
-        } else if(el === "itunes:image") {
-            this.setState({
-                xmlDoc: {
-                    image: item.querySelector(el).getAttribute("href")
-                }
-            });
+        if (el === "enclosure") {
+          itemObj.enclosure = item.querySelector(el).getAttribute("url");
+        } else if (el === "image") {
+          itemObj.image = item.querySelector(el).getAttribute("href");
         } else {
-            this.setState({
-                xmlDoc: {
-                    el: item.querySelector(el)
-                }
-            });
+          itemObj[el] = item.querySelector(el).textContent;
         }
-      })
-
+      });
       
+      let joined = this.state.xmlDoc.concat(itemObj);
+      this.setState({ xmlDoc: joined })
       return true;
     });
-
-    // Loop epList
-    // get Title, description, link, pubDate
-    // enclosure[url]
-    // itunes:summary
-    // itunes:image[href]
   }
 
   render() {
-    const { xmlDoc, isLoaded, error } = this.state;
+    const { xmlDoc, error } = this.state;
+
+    console.log(xmlDoc);
 
     if (error) {
       return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
     } else {
-      return <section className="Rss">{xmlDoc}</section>;
+      return (
+        <section className="Rss">{/* <p>{xmlDoc[0].title}</p> */}</section>
+      );
     }
   }
 }
