@@ -1,0 +1,155 @@
+html {
+  font-size: 10px;
+}
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  font-family: "Permanent Marker", cursive;
+}
+
+.App-logo {
+  /* height: 40vmin; */
+  pointer-events: none;
+}
+
+.App-header,
+.social-media {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.twitter-feed {
+  max-width: 300px;
+  width: 80%;
+  min-width: 180px;
+  position: relative;
+  margin: 0 auto;
+  max-height: 500px;
+  overflow: scroll;
+}
+.twitter-timeline {
+  width: 100%;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+a {
+  /* max-width: 200px; */
+  position: relative;
+  margin: 40px auto;
+  height: 100%;
+  color: ivory;
+  text-decoration: underline;
+}
+
+.hover-effect {
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+}
+
+.hover-effect p {
+  color: transparent;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+a:hover .hover-effect {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+a:hover .hover-effect p {
+  color: red;
+}
+
+/* Clipboards */
+
+.clipboards {
+  margin: 0 auto;
+}
+.clipboards h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 36px;
+}
+.clipboards li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+.clipboards input {
+  padding: 5px 10px;
+  font-size: 24px;
+  margin: 20px;
+  border-radius: 5px;
+}
+.clipboards input[type="submit"] {
+  cursor: pointer;
+}
+
+/* RSS Section */
+
+.episode {
+  display: flex;
+  justify-content: center;
+}
+.epList article {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: ivory;
+  font-family: "Istok Web", sans-serif;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+.epList p {
+  font-size: 1.6rem;
+}
+.epList header {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.description,
+.summary {
+  width: 40%;
+}
+
+.description {
+  display: flex;
+}
+.description img {
+  max-width: 200px;
+  height: auto;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.epList audio {
+  margin: 30px auto;
+}
