@@ -54,6 +54,8 @@ a {
   position: relative;
   margin: 40px auto;
   height: 100%;
+  color: ivory;
+  text-decoration: underline;
 }
 
 .hover-effect {
