@@ -1,5 +1,11 @@
 # RSS Feed
 - https://anchor.fm/s/af3e800/podcast/rss
+<<<<<<< HEAD
+=======
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+>>>>>>> 6b7d217d6531cb9306b021cefa7f822650d1d089
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
