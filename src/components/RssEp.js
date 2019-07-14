@@ -6,31 +6,23 @@ function createMarkup(mu) {
 
 export default function(prop) {
   let episode = prop.ep;
-  console.log(episode);
+
   return (
     <article>
       <header>
         <h6>{episode.title}</h6>
       </header>
-      <div className="episode" >
+      <div className="episode">
         <div className="description">
-            <img src={episode.image} alt="" />
+          <img src={episode.image} alt="" />
         </div>
         <div className="summary">
-            <p dangerouslySetInnerHTML={createMarkup(episode.summary)} />
+          <p dangerouslySetInnerHTML={createMarkup(episode.summary)} />
         </div>
       </div>
       <audio controls>
-          <source src={episode.enclosure} />
+        <source src={episode.enclosure} />
       </audio>
     </article>
   );
 }
-
-// "title",
-//       "description",
-//       "link",
-//       "pubDate",
-//       "enclosure",
-//       "summary",
-//       "image"

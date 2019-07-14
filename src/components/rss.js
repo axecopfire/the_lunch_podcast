@@ -1,5 +1,5 @@
 import React from "react";
-import RssEp from './RssEp';
+import RssEp from "./RssEp";
 
 export default class Rss extends React.Component {
   constructor(props) {
@@ -64,21 +64,18 @@ export default class Rss extends React.Component {
   render() {
     const { xmlDoc, error, isLoaded } = this.state;
 
-    // if (xmlDoc[0]) {
-    //   console.log(xmlDoc[0].description);
-    // }
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-        return <div>Loading...</div>
-    } else if (isLoaded) {
-
+      return <div>Loading...</div>;
+    } else {
       return (
         <section className="epList">
           {xmlDoc.map((item, index) => (
-              <RssEp ep={item} key={index} />
+            <RssEp ep={item} key={index} />
           ))}
-      </section>)
+        </section>
+      );
     }
   }
 }

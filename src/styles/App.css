@@ -1,17 +1,20 @@
+html {
+  font-size: 10px;
+}
 .App {
   text-align: center;
   background-color: #282c34;
   min-height: 100vh;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   /* height: 40vmin; */
   pointer-events: none;
 }
 
-.App-header, .social-media {
+.App-header,
+.social-media {
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -28,7 +31,7 @@
 .twitter-feed {
   max-width: 300px;
   width: 80%;
-  min-width:180px;
+  min-width: 180px;
   position: relative;
   margin: 0 auto;
   max-height: 500px;
@@ -54,7 +57,7 @@ a {
 }
 
 .hover-effect {
-  background-color: rgba(255,255,255, 0);
+  background-color: rgba(255, 255, 255, 0);
   position: absolute;
   top: 0;
   left: 0;
@@ -76,19 +79,21 @@ a {
   font-weight: bold;
 }
 
-
 a:hover .hover-effect {
-  background-color: rgba(255,255,255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
+
 a:hover .hover-effect p {
   color: red;
 }
+
+/* Clipboards */
 
 .clipboards {
   margin: 0 auto;
 }
 .clipboards h2 {
-  color: rgba(255, 255, 255, .9);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
   font-size: 36px;
 }
@@ -102,23 +107,35 @@ a:hover .hover-effect p {
   margin: 20px;
   border-radius: 5px;
 }
-.clipboards input[type=submit] {
+.clipboards input[type="submit"] {
   cursor: pointer;
 }
 
-
-.epList article {
-  background-color: #ccc;
-  font-family: 'Istok Web', sans-serif;
-}
+/* RSS Section */
 
 .episode {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
-.description, .summary {
+.epList article {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: ivory;
+  font-family: "Istok Web", sans-serif;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+.epList p {
+  font-size: 1.6rem;
+}
+.epList header {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.description,
+.summary {
   width: 40%;
-  background-color: #eee;
 }
 
 .description {
@@ -130,11 +147,7 @@ a:hover .hover-effect p {
   align-self: center;
   margin: 0 auto;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.epList audio {
+  margin: 30px auto;
 }

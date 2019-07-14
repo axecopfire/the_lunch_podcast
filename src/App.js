@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import TwitterFeed from './components/twitter_feed';
 import AnchorFM from './components/anchorFM';
 import { BrowserRouter as Router, Route } from "react-router-dom";
