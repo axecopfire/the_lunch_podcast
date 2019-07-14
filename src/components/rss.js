@@ -44,16 +44,15 @@ export default class Rss extends React.Component {
 
       elList.forEach(el => {
         if (el === "enclosure") {
-          itemObj.enclosure = item.querySelector(el).getAttribute("url");
+          itemObj["enclosure"] = item.querySelector(el).getAttribute("url");
         } else if (el === "image") {
-          itemObj.image = item.querySelector(el).getAttribute("href");
+          itemObj["image"] = item.querySelector(el).getAttribute("href");
         } else {
           itemObj[el] = item.querySelector(el).textContent;
         }
       });
-      
-      let joined = this.state.xmlDoc.concat(itemObj);
-      this.setState({ xmlDoc: joined })
+    //   console.log(itemObj)
+    this.setState({ xmlDoc: [...this.state.xmlDoc, itemObj] })
       return true;
     });
   }
@@ -61,13 +60,16 @@ export default class Rss extends React.Component {
   render() {
     const { xmlDoc, error } = this.state;
 
-    console.log(xmlDoc);
-
+    if(xmlDoc[0]) {
+        console.log(xmlDoc[0].description);
+    }
     if (error) {
       return <div>Error: {error.message}</div>;
     } else {
       return (
-        <section className="Rss">{/* <p>{xmlDoc[0].title}</p> */}</section>
+        <section className="Rss">
+        {/* { xmlDoc[0].title} */}
+        </section>
       );
     }
   }
