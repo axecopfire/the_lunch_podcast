@@ -1,3 +1,2 @@
 [build]
-base = "the_lunch_podcast/"
-publish = "the_lunch_podcast/build/"
+publish = "build/"
