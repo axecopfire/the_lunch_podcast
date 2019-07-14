@@ -41,6 +41,7 @@ export default class Rss extends React.Component {
     // then set state of xmlDoc
     epList.forEach(item => {
       let itemObj = {};
+      // console.log(item);
 
       elList.forEach(el => {
         if (el === "enclosure") {
@@ -73,12 +74,11 @@ export default class Rss extends React.Component {
     } else if (isLoaded) {
 
       return (
-        <ul className="epList">
-          {xmlDoc.map(item => (
-              <RssEp ep={item} />
-            
+        <section className="epList">
+          {xmlDoc.map((item, index) => (
+              <RssEp ep={item} key={index} />
           ))}
-      </ul>)
+      </section>)
     }
   }
 }

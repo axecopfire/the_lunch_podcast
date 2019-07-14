@@ -106,6 +106,30 @@ a:hover .hover-effect p {
   cursor: pointer;
 }
 
+
+.epList article {
+  background-color: #ccc;
+  font-family: 'Istok Web', sans-serif;
+}
+
+.episode {
+  display: flex;
+  justify-content: center;  
+}
+.description, .summary {
+  width: 40%;
+  background-color: #eee;
+}
+
+.description {
+  display: flex;
+}
+.description img {
+  max-width: 200px;
+  height: auto;
+  align-self: center;
+  margin: 0 auto;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
