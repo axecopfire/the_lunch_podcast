@@ -1,4 +1,5 @@
 import React from "react";
+import RssEp from './RssEp';
 
 export default class Rss extends React.Component {
   constructor(props) {
@@ -17,7 +18,6 @@ export default class Rss extends React.Component {
       .then(data => this.responseSanitizer(data))
       .catch(error =>
         this.setState({
-          isLoaded: true,
           error
         })
       );
@@ -51,26 +51,34 @@ export default class Rss extends React.Component {
           itemObj[el] = item.querySelector(el).textContent;
         }
       });
-    //   console.log(itemObj)
-    this.setState({ xmlDoc: [...this.state.xmlDoc, itemObj] })
+
+      this.setState({
+        xmlDoc: [...this.state.xmlDoc, itemObj],
+        isLoaded: true
+      });
       return true;
     });
   }
 
   render() {
-    const { xmlDoc, error } = this.state;
+    const { xmlDoc, error, isLoaded } = this.state;
 
-    if(xmlDoc[0]) {
-        console.log(xmlDoc[0].description);
-    }
+    // if (xmlDoc[0]) {
+    //   console.log(xmlDoc[0].description);
+    // }
     if (error) {
       return <div>Error: {error.message}</div>;
-    } else {
+    } else if (!isLoaded) {
+        return <div>Loading...</div>
+    } else if (isLoaded) {
+
       return (
-        <section className="Rss">
-        {/* { xmlDoc[0].title} */}
-        </section>
-      );
+        <ul className="epList">
+          {xmlDoc.map(item => (
+              <RssEp ep={item} />
+            
+          ))}
+      </ul>)
     }
   }
 }
