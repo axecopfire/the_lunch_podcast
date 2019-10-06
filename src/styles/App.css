@@ -119,12 +119,18 @@ a:hover .hover-effect p {
   display: flex;
   justify-content: center;
 }
+
+@media(max-width: 950px) {
+  .episode {
+    display: block;
+  }
+}
 .epList article {
   background-color: rgba(0, 0, 0, 0.1);
   color: ivory;
   font-family: "Istok Web", sans-serif;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 30px;
   border-bottom: 2px solid #ddd;
 }
 .epList p {
@@ -140,6 +146,14 @@ a:hover .hover-effect p {
   width: 40%;
 }
 
+@media(max-width: 950px) {
+  .description,
+  .summary {
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
 .description {
   display: flex;
 }
@@ -152,4 +166,5 @@ a:hover .hover-effect p {
 
 .epList audio {
   margin: 30px auto;
+  width: 100%;
 }
