@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../styles/header.module.css';
+import styles from './header.module.css';
 
 import Logo from './Logo';
 import Nav from './Nav';

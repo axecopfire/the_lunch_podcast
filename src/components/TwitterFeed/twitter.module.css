@@ -1,0 +1,17 @@
+.TwitterFeed {
+  max-width: 300px;
+  width: 80%;
+  min-width: 180px;
+  position: relative;
+  margin: 0 auto;
+  max-height: 500px;
+  overflow: scroll;
+}
+@media(min-width: 700px) {
+  .TwitterFeed {
+    float: right;
+  }
+}
+.twitter-timeline {
+  width: 100%;
+}
