@@ -2,7 +2,6 @@ html {
   font-size: 10px;
 }
 .App {
-  text-align: center;
   background-color: #282c34;
   min-height: 100vh;
   font-family: "Permanent Marker", cursive;
@@ -13,16 +12,13 @@ html {
   pointer-events: none;
 }
 
-.App-header,
 .social-media {
   /* min-height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: inline-block;
+  width: 50%;
+  margin: 50px auto;
 }
+
 
 .App-link {
   color: #61dafb;
@@ -37,16 +33,13 @@ html {
   max-height: 500px;
   overflow: scroll;
 }
+@media(min-width: 700px) {
+  .twitter-feed {
+    float: right;
+  }
+}
 .twitter-timeline {
   width: 100%;
-}
-
-img {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  max-width: 100%;
-  position: relative;
 }
 
 a {
