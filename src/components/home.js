@@ -1,16 +1,12 @@
 import React from "react";
-import TwitterFeed from "./twitter_feed";
-import AnchorFM from "./anchorFM";
+import TwitterFeed from "./TwitterFeed";
+import Announcements from './Announcements';
 
 export default function() {
   return (
     <main>
-      <section className="social-media">
-        <AnchorFM />
-      </section>
-      <section className="twitter-feed">
+        <Announcements />
         <TwitterFeed />
-      </section>
     </main>
   );
 }
