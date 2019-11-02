@@ -12,11 +12,8 @@ html {
   pointer-events: none;
 }
 
-.social-media {
-  /* min-height: 100vh; */
-  display: inline-block;
-  width: 50%;
-  margin: 50px auto;
+main {
+  padding: 20px;
 }
 
 
