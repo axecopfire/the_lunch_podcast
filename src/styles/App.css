@@ -15,6 +15,11 @@ html {
 main {
   padding: 20px;
 }
+@media(min-width: 700px) {
+  main {
+    display: flex;
+  }
+}
 
 
 .App-link {

@@ -12,6 +12,10 @@
   .TwitterFeed {
     float: right;
   }
+  .TwitterFeed:after,
+  .TwitterFeed:before {
+    clear: both;
+  }
 }
 .twitter-timeline {
   width: 100%;
