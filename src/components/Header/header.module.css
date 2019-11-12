@@ -1,15 +1,16 @@
 .header {
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
+    width: 100vw;
 }
 
 .header .logo {
     width: 20%;
     display: inline-block;
-
 }
 .header nav {
     float: right;
+    margin-right: 20px;
 }
 .header nav li {
     list-style-type: none;
