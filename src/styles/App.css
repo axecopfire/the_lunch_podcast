@@ -15,6 +15,11 @@ html {
 main {
   padding: 20px;
 }
+@media(min-width: 700px) {
+  main {
+    display: flex;
+  }
+}
 
 
 .App-link {
@@ -72,17 +77,26 @@ a:hover .hover-effect p {
   font-size: 36px;
 }
 .clipboards li {
-  margin-bottom: 10px;
+  margin: 0;
   list-style-type: none;
+  display: block;
+  position: relative;
 }
 .clipboards input {
   padding: 5px 10px;
   font-size: 24px;
-  margin: 20px;
   border-radius: 5px;
+}
+.clipboards input[type="text"] {
+  width: 95%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin-top: 40px;
 }
 .clipboards input[type="submit"] {
   cursor: pointer;
+  margin-top: 15px;
+
 }
 
 /* RSS Section */
