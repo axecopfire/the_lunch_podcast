@@ -15,12 +15,12 @@ html {
 main {
   padding: 20px;
 }
-@media(min-width: 700px) {
+
+/* @media (min-width: 700px) {
   main {
     display: flex;
   }
-}
-
+} */
 
 .App-link {
   color: #61dafb;
@@ -96,7 +96,6 @@ a:hover .hover-effect p {
 .clipboards input[type="submit"] {
   cursor: pointer;
   margin-top: 15px;
-
 }
 
 /* RSS Section */
@@ -106,7 +105,7 @@ a:hover .hover-effect p {
   justify-content: center;
 }
 
-@media(max-width: 950px) {
+@media (max-width: 950px) {
   .episode {
     display: block;
   }
@@ -132,7 +131,7 @@ a:hover .hover-effect p {
   width: 40%;
 }
 
-@media(max-width: 950px) {
+@media (max-width: 950px) {
   .description,
   .summary {
     padding: 10px 0;
@@ -153,4 +152,34 @@ a:hover .hover-effect p {
 .epList audio {
   margin: 30px auto;
   width: 100%;
+}
+
+/* Home page */
+
+.home {
+  text-align: center;
+  font-size: 30px;
+}
+
+.home section {
+  max-width: 100%;
+  display: block;
+  color: ivory;
+  padding: 10px 20px;
+}
+
+.home section {
+  /* max-width: 50%; */
+  display: block;
+  margin: 0 auto;
+}
+
+.home img,
+.home .twitter {
+  max-width: 50%;
+}
+
+.home p {
+  max-width: 80%;
+  margin: 0 auto;
 }
