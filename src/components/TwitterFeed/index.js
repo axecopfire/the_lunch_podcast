@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./twitter.module.css";
 
 export default class extends React.Component {
   render() {
