@@ -8,6 +8,12 @@ export default class Nav extends React.Component {
           <li>
             <a href="/Episodes">Listen</a>
           </li>
+          <li>
+            <a href="/About">About</a>
+          </li>
+          <li>
+            <a href="/clipboard">Clipboard App</a>
+          </li>
         </ul>
       </nav>
     );

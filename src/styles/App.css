@@ -79,12 +79,12 @@ a:hover .hover-effect p {
 .clipboards li {
   margin: 0;
   list-style-type: none;
-  display: block;
+  display: inline-block;
   position: relative;
 }
 .clipboards input {
   padding: 5px 10px;
-  font-size: 24px;
+  font-size: medium;
   border-radius: 5px;
 }
 .clipboards input[type="text"] {
